@@ -1,0 +1,3 @@
+@mixin foot { background-color: $color_footer_bg;
+    @include heading-shadow    
+}

@@ -1,3 +1,82 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/base";
+@import "./composants/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/footer";
 
-body { background-color: $color-primary;}
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body { background-color: $color-secondary;
+}
+
+
+
+
+
+
+
+//Boîtes recettes//
+.container_recepe {
+    background-color: aqua;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 4rem;
+}
+.box_recepe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: bisque;   
+}
+.box_recepe_txt> h3,p { 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+      
+}
+.box_recepe_txt {
+    width: 100%;   
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: red;
+    margin-left: 1rem;
+}
+.box_recepe_price {
+    display: flex;
+    align-items: center;    
+    max-width: 100%;
+    background-color: azure;
+}
+
+.check_icone {
+    width: 7rem;
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    margin-right: -7rem;
+    transition-duration: 1.0s;
+    transition-timing-function: ease-in;
+}
+
+.container_recepe:hover .check_icone {
+    margin-right: 0;
+    transition-duration: 1.0s;
+    transition-timing-function: ease-in;
+}
+
+
+footer { @include foot }
