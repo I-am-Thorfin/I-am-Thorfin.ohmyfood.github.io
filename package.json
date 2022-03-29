@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "Projet 3 - Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/I-am-Thorfin/PROJET-3-OCR.git"
+  },
+  "author": "Dam Grund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/I-am-Thorfin/PROJET-3-OCR/issues"
+  },
+  "homepage": "https://github.com/I-am-Thorfin/PROJET-3-OCR#readme"
+}
