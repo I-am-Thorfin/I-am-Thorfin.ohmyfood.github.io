@@ -1,0 +1,9 @@
+@mixin omfbutton {
+    height: 3rem;
+    background: linear-gradient(180deg, $color-secondary, $color-primary);
+    border-radius: 1.5rem;
+    border: inherit;
+    width: auto;
+    padding: 1rem;
+    cursor: pointer;
+    }
