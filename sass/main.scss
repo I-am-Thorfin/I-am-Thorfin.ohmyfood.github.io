@@ -17,6 +17,9 @@ a { text-decoration: none;
 a:visited { color:black;
 
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 /*En-tête*/
 .head_omf {
@@ -91,6 +94,8 @@ a:visited { color:black;
 .card {
     width: 90%;
     margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 2rem;
     height: auto;
     background-color: aqua;
