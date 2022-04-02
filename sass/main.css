@@ -93,7 +93,7 @@ a:visited {
 
 .nav_flex_card {
   width: 90%;
-  height: 4rem;
+  height: auto;
   border-radius: 1rem;
   background-color: aliceblue;
   margin: auto;
@@ -131,7 +131,38 @@ a:visited {
   background-color: bisque;
 }
 
-/*Boîte de recettes*/
+.card {
+  width: 90%;
+  margin: auto;
+  border-radius: 2rem;
+  height: auto;
+  background-color: aqua;
+}
+
+.card_img {
+  height: 8rem;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.card_back {
+  margin: auto;
+  width: 90%;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+test
 .container_recepe {
   background-color: aqua;
   border-radius: 1rem;
@@ -143,6 +174,7 @@ a:visited {
   height: 4rem;
 }
 
+test
 .container_recepe_box {
   display: -webkit-box;
   display: -ms-flexbox;

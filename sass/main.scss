@@ -60,7 +60,7 @@ a:visited { color:black;
 
 .nav_flex_card {
     width: 90%;
-    height: 4rem;
+    height: auto;
     border-radius: 1rem;
     background-color: aliceblue;
     margin: auto;
@@ -88,8 +88,29 @@ a:visited { color:black;
     ;
 }
 
+.card {
+    width: 90%;
+    margin: auto;
+    border-radius: 2rem;
+    height: auto;
+    background-color: aqua;
+    &_img {
+        height: 8rem;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+        width: 100%;  
+    }
+    &_back { 
+        margin: auto;
+        width: 90%;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-
+}
+test
 /*Boîte de recettes*/
 .container_recepe {
     background-color: aqua;
