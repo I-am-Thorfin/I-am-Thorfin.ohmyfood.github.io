@@ -22,13 +22,19 @@ body {
 }
 
 /*En-tête*/
-.head_omf {
+
+.headomf {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: $color_light_grey;   
+    h1 {
+        text-align: center;
+    }
+    p { text-align: center}
+    margin-bottom: 3rem
 }
-.title_omf { 
+.headomf__title { 
     @include flex_center;
     justify-content: center;
     background-color: white;
@@ -41,20 +47,23 @@ body {
     width: 12rem;
 }
 
-.location  { 
+.headomf__location  { 
     background-color: $color_grey_medium;
     width: 100%;
     height: 3rem;
        @include flex_center;   
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .btn { @include omfbutton;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*Navigation*/
 
-.nav_flex { 
+.sizeflex { 
     display:flex;
     flex-direction: column;
     margin-right: 1rem;
@@ -92,30 +101,30 @@ body {
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     height: auto;
     background-color: aqua;
-    &_img {
+    &__img {
         height: 8rem;
-        border-radius: 20px 20px 0 0;
+        border-radius: 1rem 1rem 0 0;
         object-fit: cover;
         width: 100%;  
     }
-    &_back { 
+    &__end { 
         margin: auto;
         width: 90%;
         background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        &__icone { background-color: red;}
     }
-
 }
-test
+
 /*Boîte de recettes*/
 .container_recepe {
     background-color: aqua;
@@ -168,4 +177,17 @@ test
 }
 
 
-footer { @include foot }
+footer {
+    @include foot_color;
+    padding-top:1.5rem;
+    padding-bottom: 3rem;
+
+    h2{ font-family: 'Shrikhand', cursive;
+        font-size: 1.5rem;
+        margin-left: 5%;
+    }
+    p { margin-left:5%;
+    }
+
+ }
+

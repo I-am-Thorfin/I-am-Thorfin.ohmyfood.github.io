@@ -1,0 +1,288 @@
+@charset "UTF-8";
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*En-tête*/
+.headomf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f6f6f6;
+  margin-bottom: 3rem;
+}
+
+.headomf h1 {
+  text-align: center;
+}
+
+.headomf p {
+  text-align: center;
+}
+
+.headomf__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 5px #353535;
+          box-shadow: 0px 0px 5px #353535;
+  z-index: 1;
+}
+
+.size_logo {
+  margin: 1rem;
+  width: 12rem;
+}
+
+.headomf__location {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
+  background: linear-gradient(180deg, #ff79da, #9356DC);
+  border-radius: 1.5rem;
+  border: inherit;
+  width: auto;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*Navigation*/
+.sizeflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.nav_flex_card {
+  width: 90%;
+  height: auto;
+  border-radius: 1rem;
+  background-color: aliceblue;
+  margin: auto;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card_circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  font-size: 0.8rem;
+  color: white;
+  position: relative;
+  right: 0.75rem;
+}
+
+.card_txt {
+  width: 100%;
+  background-color: bisque;
+}
+
+.card {
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  height: auto;
+  background-color: aqua;
+}
+
+.card__img {
+  height: 8rem;
+  border-radius: 1rem 1rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.card__end {
+  margin: auto;
+  width: 90%;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__end__icone {
+  background-color: red;
+}
+
+/*Boîte de recettes*/
+.container_recepe {
+  background-color: aqua;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 4rem;
+}
+
+.container_recepe_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background-color: bisque;
+}
+
+.container_recepe_box_txt {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  background-color: red;
+  margin-left: 1rem;
+}
+
+.container_recepe_box_txt * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.container_recepe_box_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  background-color: azure;
+}
+
+.container_recepe_check_icone {
+  width: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: -7rem;
+  -webkit-transition-duration: 1.0s;
+          transition-duration: 1.0s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.container_recepe:hover .container_recepe_check_icone {
+  margin-right: 0;
+  -webkit-transition-duration: 1.0s;
+          transition-duration: 1.0s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+footer {
+  background-color: #353535;
+  color: #f6f6f6;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+footer h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.5rem;
+  margin-left: 5%;
+}
+
+footer p {
+  margin-left: 5%;
+}
+/*# sourceMappingURL=main.css.map */

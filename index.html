@@ -6,56 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style type="text/css"> @import url("./public/css/style.css");</style> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <style type="text/css"> @import url("./sass/main.css");</style> 
+    <script src="https://kit.fontawesome.com/5f0f0952ef.js" crossorigin="anonymous"></script>
     <title>Oh My food</title>
 </head>
 <body>
     <header>
-       
-        <div class="head_omf">
-            <div class="title_omf">
+        <div class="headomf">
+            <div class="headomf__title">
                 <img src="./images/logo/ohmyfood.png" class="size_logo" alt="Logo Oh My Food"/>
             </div>      
-            <div class="location"> 
-                <div>Icone</div>
+            <div class="headomf__location"> 
+                <div><i class="fas fa-map-marker-alt"></i></div>
                 <div>Paris, Belleville</div>
-            </div>
-            
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exceptions sélectionnés par nos soins</p>
-            
+            </div>           
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exceptions sélectionnés par nos soins</p>            
             <button class="btn">Explorez nos restaurants</button>
         </div>
-        <nav class="nav_flex">
+        <nav class="sizeflex">
             <h2>Fonctionnement</h2>
             <a class="nav_flex_card" href="#">
                 <div class="card_circle">1</div>
-                <div>icone</div>
+                <div><i class="fas fa-mobile-alt"></i></div>
                 <div class="card_txt">Choisissez un restaurant</div>
             </a>
             <div class="nav_flex_card">
                 <div class="card_circle">2</div>
-                <div>icone</div>
+                <div><i class="fas fa-list"></i></div>
                 <div class="card_txt">Composez votre menu</div>
             </div>
             <div class="nav_flex_card">
                 <div class="card_circle">3</div>
-                <div>icone</div>
+                <div><i class="fas fa-store"></i></div>
                 <div class="card_txt">Dégustez au restaurant</div>
             </div>
         </nav>  
     </header>
     <main>
-        <section>
-            <div><h2>Restaurants</h2></div>
+        <section class="sizeflex">
+            <h2>Restaurants</h2>
             <div>
                 <div class="card">
-                    <img class="card_img"
+                    <img class="card__img"
                        src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                        alt="Photo de chambre, Auberge de la cannebière"                     
                        />
-                    <div class="card_back">
+                    <div class="card__end">
                         <div> <h3>La Palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>    
@@ -65,11 +63,11 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card_img"
-                       src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    <img class="card__img"
+                       src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                        alt="Photo de chambre, Auberge de la cannebière"                     
                        />
-                    <div class="card_back">
+                    <div class="card__end">
                         <div> <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>    
@@ -79,11 +77,11 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card_img"
-                       src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    <img class="card__img"
+                       src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                        alt="Photo de chambre, Auberge de la cannebière"                     
                        />
-                    <div class="card_back">
+                    <div class="card__end">
                         <div> <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>    
@@ -93,15 +91,15 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card_img"
-                       src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    <img class="card__img"
+                       src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                        alt="Photo de chambre, Auberge de la cannebière"                     
                        />
-                    <div class="card_back">
+                    <div class="card__end">
                         <div> <h3>Le délice des sens</h3>
                             <p>Folie Méricourt</p>
                         </div>    
-                        <div>
+                        <div class="card__end__icone">
                             Logo coeur
                         </div>
                     </div>
@@ -110,8 +108,13 @@
         </section>
     </main>
     <footer>
+      <h2>Ohmyfood</h2>
+      <p><i class="fas fa-utensils"></i> Proposer un restaurant</p>
+      <p><i class="fas fa-hands-helping fa-xs"></i> Devenir Partenaire</p>
+      <p>Mentions légales</p>
+      <p>Contact</p>
       
-        
+      
     </footer>
 </body>
 </html>
