@@ -19,6 +19,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  background-color: #f6f6f6;
+}
+
 /*En-tête*/
 .headomf {
   display: -webkit-box;
@@ -32,7 +36,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f6f6f6;
-  margin-bottom: 3rem;
 }
 
 .headomf h1 {
@@ -91,7 +94,11 @@ body {
   padding: 1rem;
   cursor: pointer;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  color: white;
+  -webkit-box-shadow: 0px 3px 3px #d1d1d1;
+          box-shadow: 0px 3px 3px #d1d1d1;
 }
 
 /*Navigation*/
@@ -105,13 +112,19 @@ body {
           flex-direction: column;
   margin-right: 1rem;
   margin-left: 1rem;
+  padding-bottom: 4rem;
+}
+
+.sizeflex h2 {
+  margin-top: 3rem;
+  margin-bottom: 0rem;
 }
 
 .nav_flex_card {
-  width: 90%;
+  width: 95%;
   height: auto;
-  border-radius: 1rem;
-  background-color: aliceblue;
+  border-radius: 1.5rem;
+  background-color: #f6f6f6;
   margin: auto;
   margin-top: 1rem;
   display: -webkit-box;
@@ -120,6 +133,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 3px 3px #d1d1d1;
+          box-shadow: 0px 3px 3px #d1d1d1;
 }
 
 .card_circle {
@@ -144,7 +161,23 @@ body {
 
 .card_txt {
   width: 100%;
-  background-color: bisque;
+  margin: 2rem;
+  font-weight: bold;
+}
+
+.card_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+  margin: auto;
+  color: #848484;
 }
 
 .card {
@@ -153,8 +186,11 @@ body {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 1rem;
-  height: auto;
-  background-color: aqua;
+  height: 100%;
+  background-color: white;
+  padding-bottom: 1rem;
+  -webkit-box-shadow: 0px 3px 3px #d1d1d1;
+          box-shadow: 0px 3px 3px #d1d1d1;
 }
 
 .card__img {
@@ -167,8 +203,10 @@ body {
 
 .card__end {
   margin: auto;
+  margin-top: 1rem;
+  margin-bottom: rem;
+  height: auto;
   width: 90%;
-  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
