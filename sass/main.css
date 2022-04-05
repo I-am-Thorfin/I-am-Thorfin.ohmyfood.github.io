@@ -138,7 +138,6 @@ main {
 
 .flexpage {
   border-radius: 2.5rem 2.5rem 0 0;
-  background-color: aqua;
 }
 
 .nav_flex_card {
@@ -257,7 +256,111 @@ main {
   background-color: red;
 }
 
+/*Titres*/
+.flexpage h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-animation: slide 1s forwards;
+          animation: slide 1s forwards;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.flexpage h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.2rem;
+  background-color: #99e2d0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  -webkit-animation: slide 1s forwards;
+          animation: slide 1s forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 /*Boîte de recettes*/
+.flexpage ul :nth-child(1) {
+  position: relative;
+  -webkit-animation: fondu-in 0.75s ease;
+          animation: fondu-in 0.75s ease;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.flexpage ul :nth-child(2) {
+  position: relative;
+  -webkit-animation: fondu-in 0.75s ease;
+          animation: fondu-in 0.75s ease;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.flexpage ul :nth-child(3) {
+  position: relative;
+  -webkit-animation: fondu-in 0.75s ease;
+          animation: fondu-in 0.75s ease;
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes fondu-in {
+  0% {
+    bottom: -5rem;
+    opacity: 0;
+  }
+  50% {
+    bottom: 0rem;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fondu-in {
+  0% {
+    bottom: -5rem;
+    opacity: 0;
+  }
+  50% {
+    bottom: 0rem;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0rem;
+    opacity: 1;
+  }
+}
+
 .container_recepe {
   background-color: white;
   border-radius: 1rem;
@@ -268,8 +371,10 @@ main {
   width: 100%;
   height: 4.5rem;
   margin: auto;
-  margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: 0px 3px 3px #c3c3c3;
+          box-shadow: 0px 3px 3px #c3c3c3;
 }
 
 .container_recepe_box {
@@ -296,7 +401,6 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   overflow: hidden;
-  background-color: red;
   margin-left: 1rem;
 }
 
@@ -363,6 +467,13 @@ main {
           transition-duration: 1.0s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
+}
+
+.container_recepe:hover {
+  -webkit-box-shadow: 2px 5px 5px #aaaaaa;
+          box-shadow: 2px 5px 5px #aaaaaa;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 footer {

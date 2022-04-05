@@ -89,8 +89,7 @@ main {
 }
 .flexpage{
     border-radius: 2.5rem 2.5rem 0 0;
-    background-color: aqua;
-}
+    }
 
 
 .nav_flex_card {
@@ -168,7 +167,70 @@ main {
     }
 }
 
+/*Titres*/
+
+.flexpage h2 { 
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    animation: slide 1s forwards;
+    animation-delay: 0.1s; 
+}
+.flexpage h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: $color-third;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    animation: slide 1s forwards;
+    animation-delay: 0.5s; 
+}
+
+@keyframes slide {
+    0% { left:-400px;}
+    100% {left: 0%;}
+}
+
+
+
+
+
 /*Boîte de recettes*/
+
+.flexpage ul {
+    :nth-child(1) {     
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: 0.25s;
+        animation-fill-mode: both;}
+    :nth-child(2) {    
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;}
+    :nth-child(3) {     
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: .75s;
+        animation-fill-mode: both;}
+}
+@keyframes fondu-in {
+    0% { 
+        bottom:-5rem;
+        opacity:0;
+    }
+    50% { bottom:0rem;
+    opacity: 0.5;}
+    100% {
+        bottom:0rem;
+        opacity:1;}
+}
+
+
+
 .container_recepe {
     background-color: white;
     border-radius: 1rem;
@@ -177,13 +239,13 @@ main {
     width: 100%;
     height: 4.5rem;
     margin: auto;
-    margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    @include box_shadowing;
     &_box {
         @include flex_center;
         width: 100%;
-        overflow: hidden;
-           
+        overflow: hidden;      
     }
 }
 .container_recepe_box_txt {
@@ -193,8 +255,8 @@ main {
     flex-direction: column;
     justify-content: space-around;
     overflow: hidden;
-    background-color: red;
     margin-left: 1rem;
+    
 }
 .container_recepe_box_txt * { 
     white-space: nowrap;
@@ -211,7 +273,7 @@ main {
 .container_recepe_check_icone {
     width: 5rem;
     @include flex_center;
-    background-color: #99e2d0;
+    background-color: $color-third;
     color: white;
     justify-content: center;
     margin-right: -5rem;
@@ -233,6 +295,10 @@ main {
         transition-duration: 1.0s;
         transition-timing-function: ease-in;
     } 
+}
+.container_recepe:hover { 
+    @include box_shadowing_hover;
+    transition-duration: 0.3s;    
 }
 footer {
     @include foot_color;
