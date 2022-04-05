@@ -11,6 +11,14 @@
     box-shadow: 0px 3px 3px darken($color_light_grey, 20%);
 }
 
+@mixin box_shadowing_hover {
+    box-shadow: 2px 5px 5px darken($color_light_grey, 30%);
+}
+
+@mixin bright {    
+    filter: brightness(1.1);          
+    } 
+
 
 
 
