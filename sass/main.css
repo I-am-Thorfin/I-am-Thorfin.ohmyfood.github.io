@@ -164,7 +164,6 @@ input {
   border-radius: 2.5rem 2.5rem 0 0;
   margin-top: -2.5rem;
   position: relative;
-  z-index: 999;
 }
 
 .nav_flex_card {
@@ -481,6 +480,7 @@ input {
           transition-duration: 1.0s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
+  cursor: pointer;
 }
 
 .container_recepe_check_icone i {
