@@ -12,6 +12,13 @@
     margin: 0;
     padding: 0;
 }
+ul
+{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
 a { text-decoration: none;
     color: black; 
 }
@@ -25,6 +32,14 @@ main {
 }
 
 /*En-tête*/
+.header__img {
+    height: 20rem;
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
 .headomf {
     display: flex;
     align-items: center;
@@ -50,6 +65,15 @@ main {
 .size_logo {
     margin: 1rem;
     width: 12rem;
+}
+
+input { 
+    border:none;
+    background-color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0rem 0rem;
 }
 
 .headomf__location  { 
@@ -89,9 +113,10 @@ main {
 }
 .flexpage{
     border-radius: 2.5rem 2.5rem 0 0;
-    }
-
-
+    margin-top: -2.5rem; 
+    position: relative;
+    z-index: 999;
+}
 .nav_flex_card {
     width: 95%;
     height: auto;
@@ -147,6 +172,7 @@ main {
     height: 100%;
     background-color: white;
     padding-bottom: 1rem;
+    position: relative;
     @include box_shadowing;
     &__img {
         height: 8rem;
@@ -164,6 +190,17 @@ main {
         align-items: center;
         justify-content: space-between;
         .end__heart { background-color: red;}
+    }
+    &__new {
+        background-color: $color-third;
+        width: auto;
+        padding: 0.3rem 1rem ;
+        position: absolute;
+        border-radius: 0.2rem;
+        top:1rem;
+        right:1rem;
+        text-align: center;
+        color: darken($color-third,35%);
     }
 }
 
@@ -228,9 +265,6 @@ main {
         bottom:0rem;
         opacity:1;}
 }
-
-
-
 .container_recepe {
     background-color: white;
     border-radius: 1rem;
@@ -307,9 +341,9 @@ footer {
 
     h2{ font-family: 'Shrikhand', cursive;
         font-size: 1.5rem;
-        margin-left: 5%;
+        margin-left: 1rem;
     }
-    p { margin-left:5%;
+    p { margin-left:1rem;
     }
 
  }
