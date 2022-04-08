@@ -1,3 +1,19 @@
-@mixin foot_color { background-color: darken($color_light_grey, 75%);
-    color: $color_light_grey; 
+/*Définit les généralités du footer*/
+@mixin foot_general { 
+    background-color: darken($color_light_grey, 75%);
+    color: $color_light_grey;
+    padding-top:1.5rem;
+    padding-bottom: 3rem;
 }
+/*Définit la police du titre*/
+@mixin foot_title {
+    font-family: 'Shrikhand', cursive;
+        font-size: 1.5rem;    
+}
+/* Définit le margin des textes */
+@mixin foot_marge { 
+    margin-left:1rem;
+}
+
+
+

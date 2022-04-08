@@ -16,11 +16,7 @@ header a {
     position: absolute;
     left: 5%
 }
-
-
-
-ul
-{
+ul {
 list-style: none;
 padding: 0;
 margin: 0;
@@ -28,8 +24,6 @@ padding-inline-start: 0;
 margin-block-start: 0;
 margin-block-end: 0;
 }
-
-
 a { text-decoration: none;
     color: black; 
 }
@@ -72,7 +66,7 @@ ol {
     position: relative;
 }
 
-.headomf {
+header {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -85,7 +79,7 @@ ol {
         margin-bottom: 4rem;
     }   
 }
-.headomf__title { 
+.header__title { 
     @include flex_center;
     justify-content: center;
     background-color: white;
@@ -106,8 +100,7 @@ input {
     text-align: center;
     padding: 0rem 0rem;
 }
-
-.headomf__location  { 
+.header__location  { 
     background-color: darken($color_light_grey, 10%);
     width: 100%;
     height: 3rem;
@@ -115,7 +108,6 @@ input {
     justify-content: center;
     margin-bottom: 2rem;
 }
-
 .btn { margin: auto;
     @include omfbutton;
     @include box_shadowing;
@@ -126,13 +118,13 @@ input {
     @include box_shadowing_hover;
     transition-duration: 0.3s;
 }
-
 section { 
     display:flex;
     flex-direction: column;
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 4rem;
+    
     h2 {
         margin-top: 3rem;
         margin-bottom: 1rem;
@@ -143,69 +135,62 @@ section {
     }
 .flexpage{
     border-radius: 2.5rem 2.5rem 0 0;
-    margin-top: -2.5rem; 
     position: relative;
+    margin-top: -2.5rem;
 }
-
-
-.nav_flex_card {
-    width: auto;
-    height: auto;
-    border-radius: 1.5rem;
-    background-color: $color_light_grey;
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    @include box_shadowing;    
-    transition-duration: 0.3s;       
-}
-.nav_flex_card:hover{ 
-    background-color: lighten($color-primary,35%);
-    transition-duration: 0.3s;
-    .card_icon {color:$color-primary;
-        transition-duration: 0.3s;}
-}
-
-.card_circle {
-    @include flex_center;
-    justify-content: center;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
-    border-radius: 50%;
-    background-color: $color-primary;
-    font-size: 0.8rem;
-    color: white;
-    position: relative;
-    z-index: 1;
-    right:0.75rem
-}
-
-.card_txt {
+.container { 
     width: 100%;
-    margin:2rem;
-    font-weight: bold;
-}
-.card_icon {
-    @include flex_center;
-    justify-content: center;
-    width: 10%;
-    margin: auto; 
-    color: darken($color_light_grey,50%);
-}
-
-.card {
-    width: 100%;
-    margin: auto;
+    border-radius: 1rem;
+    background-color: white;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: 1rem;
-    height: 100%;
-    background-color: white;
+    @include box_shadowing;
+}
+
+.tuto {
+    width: auto;
+    border-radius: 1.5rem;
+    background-color: $color_light_grey;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;       
+    transition-duration: 0.3s;   
+    &__circle {
+        @include flex_center;
+        justify-content: center;
+        min-height: 1.5rem;
+        min-width: 1.5rem;
+        border-radius: 50%;
+        background-color: $color-primary;
+        font-size: 0.8rem;
+        color: white;
+        position: relative;
+        z-index: 1;
+        right:0.75rem
+    }
+    &__txt {
+        width: 100%;
+        margin:2rem;
+        font-weight: bold;
+    }
+    &__icon {
+        @include flex_center;
+        justify-content: center;
+        width: 10%;
+        margin: auto; 
+        color: darken($color_light_grey,50%);
+    }    
+}
+.tuto:hover{ 
+    background-color: lighten($color-primary,35%);
+    transition-duration: 0.3s;
+    .tuto__icon {color:$color-primary;
+        transition-duration: 0.3s;}
+}
+.card { 
     padding-bottom: 1rem;
     position: relative;
-    @include box_shadowing;
+    transition-duration: 0.3s;
     &__img {
         height: 8rem;
         border-radius: 1rem 1rem 0 0;
@@ -215,14 +200,11 @@ section {
     &__end { 
         margin: auto;
         margin-top: 1rem;
-        margin-bottom: rem;
         height: auto;
         width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-        
+        justify-content: space-between;        
     } 
     &__new {
         background-color: $color-third;
@@ -236,7 +218,11 @@ section {
         color: darken($color-third,35%);
     }
 }
-
+.card:hover {
+    @include bright;
+    @include box_shadowing_hover;
+    transition-duration: 0.3s;
+}
 
 .heart { 
     font-size: 2rem;
@@ -339,91 +325,76 @@ transition-duration: 0.3s; }
         bottom:0rem;
         opacity:1;}
 }
-.container_recepe {
-    background-color: white;
-    border-radius: 1rem;
+.recepe {
     display: flex;
     overflow: hidden;
-    width: 100%;
     height: 4.5rem;
-    margin: auto;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     @include box_shadowing;
-    &_box {
+    &__box {
         @include flex_center;
         width: 100%;
-        overflow: hidden;      
+        overflow: hidden;
+        &__txt {
+            width: 100%;   
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            overflow: hidden;
+            margin-left: 1rem;    
+        }    
+        &__price {
+            @include flex_center;    
+            max-width: 100%;
+            background-color: azure;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }  
+    }
+    &__check__icone {
+        width: 5rem;
+        @include flex_center;
+        background-color: $color-third;
+        color: white;
+        justify-content: center;
+        margin-right: -5rem;
+        transition-duration: 1.0s;
+        transition-timing-function: ease-in;
+        cursor: pointer;
+        i {
+            transform: rotate(0deg);
+            transition-duration: 1.0s;
+            transition-timing-function: ease-in;
+          }
     }
 }
-.container_recepe_box_txt {
-    width: 100%;   
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    overflow: hidden;
-    margin-left: 1rem;
-    
-}
-.container_recepe_box_txt * { 
+.recepe__box__txt * { 
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;       
 }
-.container_recepe_box_price {
-    @include flex_center;    
-    max-width: 100%;
-    background-color: azure;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-.container_recepe_check_icone {
-    width: 5rem;
-    @include flex_center;
-    background-color: $color-third;
-    color: white;
-    justify-content: center;
-    margin-right: -5rem;
-    transition-duration: 1.0s;
-    transition-timing-function: ease-in;
-    cursor: pointer;
-    
-    i {
-        transform: rotate(0deg);
-        transition-duration: 1.0s;
-        transition-timing-function: ease-in;
-        
-    }
-}
-
-
-.container_recepe:hover .container_recepe_check_icone {
+.recepe:hover .recepe__check__icone {
     margin-right: 0;
     transition-duration: 1.0s;
-    transition-timing-function: ease-in;
-    
+    transition-timing-function: ease-in;    
     i {
         transform: rotate(360deg);
         transition-duration: 1.0s;
         transition-timing-function: ease-in;
     } 
 }
-.container_recepe:hover { 
+.recepe:hover { 
     @include box_shadowing_hover;
     transition-duration: 0.3s;    
 }
-footer {
-    
-    @include foot_color;
-    padding-top:1.5rem;
-    padding-bottom: 3rem;
 
-    h2{ font-family: 'Shrikhand', cursive;
-        font-size: 1.5rem;
-        margin-left: 1rem;
+footer {   
+    @include foot_general;
+    h2{ 
+        @include foot_marge;
+        @include foot_title;       
     }
-    p { margin-left:1rem;
+    p { @include foot_marge;
     }
 
  }
@@ -466,13 +437,13 @@ footer {
         margin-bottom: 15px;
         position: relative;
         left:1.2rem;
-        animation: slide_loader 5s forwards;
+        animation: slide_loader 3s forwards;
         animation-delay: 0.1s; }
 }
 
 @keyframes slide_loader {
     0% { left:-500%;}
-    25% {left:1.2rem;}
+    40% {left:1.2rem;}
     
 }
 @keyframes load_box {100%
@@ -524,12 +495,11 @@ footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; opacity: 1;  
-        }
-     
+        }    
  }
 
 .loader_box {     width: 120px;
-    height: 120;
+    height: 120px;
     overflow: hidden;
     text-align: center;
     position: relative;
