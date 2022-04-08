@@ -1,0 +1,10 @@
+
+
+@mixin header_title{
+    @include flex_center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 0px 5px darken($color_light_grey,50%);
+    z-index: 1;
+}
