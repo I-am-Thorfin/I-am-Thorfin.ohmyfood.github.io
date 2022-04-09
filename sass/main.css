@@ -221,7 +221,7 @@ section h2 {
   background-color: white;
 }
 
-.tuto {
+.container--tuto {
   width: auto;
   border-radius: 1.5rem;
   background-color: #f6f6f6;
@@ -236,7 +236,7 @@ section h2 {
           transition-duration: 0.3s;
 }
 
-.tuto__circle {
+.container--tuto .tuto__circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,13 +257,13 @@ section h2 {
   right: 0.75rem;
 }
 
-.tuto__txt {
+.container--tuto .tuto__txt {
   width: 100%;
   margin: 2rem;
   font-weight: bold;
 }
 
-.tuto__icon {
+.container--tuto .tuto__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,26 +278,26 @@ section h2 {
   color: #777777;
 }
 
-.tuto:hover {
+.container--tuto:hover {
   background-color: #f2eafb;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.tuto:hover .tuto__icon {
+.container--tuto:hover .tuto__icon {
   color: #9356DC;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.card {
+.container--card {
   padding-bottom: 1rem;
   position: relative;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-.card__img {
+.container--card .card__img {
   height: 8rem;
   border-radius: 1rem 1rem 0 0;
   -o-object-fit: cover;
@@ -305,7 +305,7 @@ section h2 {
   width: 100%;
 }
 
-.card__end {
+.container--card .card__end {
   margin: auto;
   margin-top: 1rem;
   height: auto;
@@ -321,7 +321,7 @@ section h2 {
           justify-content: space-between;
 }
 
-.card__new {
+.container--card .card__new {
   background-color: #99e2d0;
   width: auto;
   padding: 0.3rem 1rem;
@@ -333,7 +333,7 @@ section h2 {
   color: #2c9c81;
 }
 
-.card:hover {
+.container--card:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
   -webkit-box-shadow: 2px 5px 5px #aaaaaa;
@@ -514,7 +514,7 @@ section h2 {
   }
 }
 
-.recepe {
+.container--recepe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +524,7 @@ section h2 {
           box-shadow: 0px 3px 3px #c3c3c3;
 }
 
-.recepe__box {
+.container--recepe .recepe__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,7 +535,7 @@ section h2 {
   overflow: hidden;
 }
 
-.recepe__box__txt {
+.container--recepe .recepe__box--txt {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -551,7 +551,7 @@ section h2 {
   margin-left: 1rem;
 }
 
-.recepe__box__price {
+.container--recepe .recepe__box--price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,7 +564,7 @@ section h2 {
   margin-right: 1rem;
 }
 
-.recepe__check__icone {
+.container--recepe .recepe__check {
   width: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,7 +585,7 @@ section h2 {
   cursor: pointer;
 }
 
-.recepe__check__icone i {
+.container--recepe .recepe__check i {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition-duration: 1.0s;
@@ -594,13 +594,13 @@ section h2 {
           transition-timing-function: ease-in;
 }
 
-.recepe__box__txt * {
+.recepe__box--txt * {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.recepe:hover .recepe__check__icone {
+.container--recepe:hover .recepe__check {
   margin-right: 0;
   -webkit-transition-duration: 1.0s;
           transition-duration: 1.0s;
@@ -608,7 +608,7 @@ section h2 {
           transition-timing-function: ease-in;
 }
 
-.recepe:hover .recepe__check__icone i {
+.container--recepe:hover .recepe__check i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 1.0s;

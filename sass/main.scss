@@ -136,7 +136,7 @@ section {
 .bg_tuto { 
     background-color: white;
     }    
-.tuto {
+.container--tuto {
     width: auto;
     border-radius: 1.5rem;
     background-color: $color_light_grey;
@@ -144,7 +144,7 @@ section {
     display: flex;
     align-items: center;       
     transition-duration: 0.3s;   
-    &__circle {
+    .tuto__circle {
         @include flex_center;
         justify-content: center;
         min-height: 1.5rem;
@@ -157,12 +157,12 @@ section {
         z-index: 1;
         right:0.75rem
     }
-    &__txt {
+    .tuto__txt {
         width: 100%;
         margin:2rem;
         font-weight: bold;
     }
-    &__icon {
+    .tuto__icon {
         @include flex_center;
         justify-content: center;
         width: 10%;
@@ -170,23 +170,23 @@ section {
         color: darken($color_light_grey,50%);
     }    
 }
-.tuto:hover{ 
+.container--tuto:hover{ 
     background-color: lighten($color-primary,35%);
     transition-duration: 0.3s;
     .tuto__icon {color:$color-primary;
         transition-duration: 0.3s;}
 }
-.card { 
+.container--card { 
     padding-bottom: 1rem;
     position: relative;
     transition-duration: 0.3s;
-    &__img {
+    .card__img {
         height: 8rem;
         border-radius: 1rem 1rem 0 0;
         object-fit: cover;
         width: 100%;  
     }
-    &__end { 
+    .card__end { 
         margin: auto;
         margin-top: 1rem;
         height: auto;
@@ -195,7 +195,7 @@ section {
         align-items: center;
         justify-content: space-between;        
     } 
-    &__new {
+    .card__new {
         background-color: $color-third;
         width: auto;
         padding: 0.3rem 1rem ;
@@ -207,7 +207,7 @@ section {
         color: darken($color-third,35%);
     }
 }
-.card:hover {
+.container--card:hover {
     @include bright;
     @include box_shadowing_hover;
     transition-duration: 0.3s;
@@ -318,16 +318,16 @@ transition-duration: 0.3s; }
         bottom:0rem;
         opacity:1;}
 }
-.recepe {
+.container--recepe {
     display: flex;
     overflow: hidden;
     height: 4.5rem;
     @include box_shadowing;
-    &__box {
+    .recepe__box {
         @include flex_center;
         width: 100%;
         overflow: hidden;
-        &__txt {
+        &--txt {
             width: 100%;   
             height: 100%;
             display: flex;
@@ -336,7 +336,7 @@ transition-duration: 0.3s; }
             overflow: hidden;
             margin-left: 1rem;    
         }    
-        &__price {
+        &--price {
             @include flex_center;    
             max-width: 100%;
             background-color: azure;
@@ -344,7 +344,7 @@ transition-duration: 0.3s; }
             margin-right: 1rem;
         }  
     }
-    &__check__icone {
+    .recepe__check {
         width: 5rem;
         @include flex_center;
         background-color: $color-third;
@@ -361,12 +361,12 @@ transition-duration: 0.3s; }
           }
     }
 }
-.recepe__box__txt * { 
+.recepe__box--txt * { 
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;       
 }
-.recepe:hover .recepe__check__icone {
+.container--recepe:hover .recepe__check {
     margin-right: 0;
     transition-duration: 1.0s;
     transition-timing-function: ease-in;    
