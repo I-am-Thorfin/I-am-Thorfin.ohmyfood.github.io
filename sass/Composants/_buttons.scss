@@ -1,5 +1,4 @@
-
-@mixin omfbutton {
+.btn { margin: auto;
     height: 3rem;
     background: linear-gradient(180deg, $color-secondary, $color-primary);
     border-radius: 1.5rem;
@@ -10,7 +9,13 @@
     font-weight: bold;
     color: white;
     margin-top: 2rem;
-    min-width: 10rem;    
-    }
+    min-width: 10rem; 
+    @include box_shadowing;
+    transition-duration: 0.3s;      
+}
 
-      
+.btn:hover {
+    @include bright;
+    @include box_shadowing_hover;
+    transition-duration: 0.3s;
+}

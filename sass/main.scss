@@ -2,225 +2,21 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./composants/buttons";
-@import "./composants/input";
+@import "./composants/card";
+@import "./composants/tuto";
+@import "./composants/recepe";
 @import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/container";
 @import "./layouts/footer";
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-header a { 
-    position: absolute;
-    left: 5%
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-padding-inline-start: 0;
-margin-block-start: 0;
-margin-block-end: 0;
-}
-a { text-decoration: none;
-    color: black; 
-}
-a:visited { color:black;
-}
-html {
-    height: 100%;
-  }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;   
-    justify-content: space-between; 
-}
-main {
-    background-color: $color_light_grey;
-    
-}
-
-ol {     
-    list-style-type: none;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
-}
-
-
-/*En-tête*/
-
-header {
-    @include flex_center;
-    flex-direction: column;
-    background-color: $color_light_grey;   
-    h1 {
-        text-align: center;
-    }
-    p { text-align: center}
-    .btn {
-        margin-bottom: 4rem;
-    }
-    .header__title { 
-        @include header_title; 
-        .size_logo {
-            margin: 1rem;
-            width: 12rem;
-        }
-    }   
-    .header__img {
-        height: 20rem;
-        object-fit: cover;
-        width: 100%;
-        z-index: 0;
-        position: relative;
-    }
-    .size_logo {
-        margin: 1rem;
-        width: 12rem;
-    }
-    .header__location  { 
-        background-color: darken($color_light_grey, 10%);
-        width: 100%;
-        height: 3rem;
-           @include flex_center;   
-        justify-content: center;
-        margin-bottom: 2rem;
-        input { 
-            @include input_location;
-        }
-    }
-}
-
-.btn { margin: auto;
-    @include omfbutton;
-    @include box_shadowing;
-    transition-duration: 0.3s;      
-}
-.btn:hover {
-    @include bright;
-    @include box_shadowing_hover;
-    transition-duration: 0.3s;
-}
-section { 
-    display:flex;
-    flex-direction: column;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 4rem;
-    
-    h2 {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-    }
-}
-
-
-.container { 
-    @include contain;
-    @include box_shadowing;
-}
-
-/**Page principale**/
-
-.bg_tuto { 
-    background-color: white;
-    }    
-.container--tuto {
-    width: auto;
-    border-radius: 1.5rem;
-    background-color: $color_light_grey;
-    margin-left: 0.5rem;
-    display: flex;
-    align-items: center;       
-    transition-duration: 0.3s;   
-    .tuto__circle {
-        @include flex_center;
-        justify-content: center;
-        min-height: 1.5rem;
-        min-width: 1.5rem;
-        border-radius: 50%;
-        background-color: $color-primary;
-        font-size: 0.8rem;
-        color: white;
-        position: relative;
-        z-index: 1;
-        right:0.75rem
-    }
-    .tuto__txt {
-        width: 100%;
-        margin:2rem;
-        font-weight: bold;
-    }
-    .tuto__icon {
-        @include flex_center;
-        justify-content: center;
-        width: 10%;
-        margin: auto; 
-        color: darken($color_light_grey,50%);
-    }    
-}
-.container--tuto:hover{ 
-    background-color: lighten($color-primary,35%);
-    transition-duration: 0.3s;
-    .tuto__icon {color:$color-primary;
-        transition-duration: 0.3s;}
-}
-.container--card { 
-    padding-bottom: 1rem;
-    position: relative;
-    transition-duration: 0.3s;
-    .card__img {
-        height: 8rem;
-        border-radius: 1rem 1rem 0 0;
-        object-fit: cover;
-        width: 100%;  
-    }
-    .card__end { 
-        margin: auto;
-        margin-top: 1rem;
-        height: auto;
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;        
-    } 
-    .card__new {
-        background-color: $color-third;
-        width: auto;
-        padding: 0.3rem 1rem ;
-        position: absolute;
-        border-radius: 0.2rem;
-        top:1rem;
-        right:1rem;
-        text-align: center;
-        color: darken($color-third,35%);
-    }
-}
-.container--card:hover {
-    @include bright;
-    @include box_shadowing_hover;
-    transition-duration: 0.3s;
-}
-
+/**LE COEUR**/
 .heart { 
     font-size: 2rem;
     height: 2rem;
     overflow: hidden;
     .far { display: block;
-        transition-duration: 0.3s; 
-        
-        
+        transition-duration: 0.3s;         
     }
     .fas { 
         display :block;
@@ -242,8 +38,18 @@ transition-duration: 0.3s;
 .heart:hover .fas { opacity: 1;
 transition-duration: 0.3s; }
 
-/*Page de recettes*/
+/*Titre principale, page des menus*/
+.flex_title { 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 10%;
+    h1 { font-family: 'Shrikhand', cursive;;
+    font-size: 1.7rem;}
+}
 
+/*Titre secondaire, animés, page des menus*/
 .menu{
     border-radius: 2.5rem 2.5rem 0 0;
     position: relative;
@@ -269,17 +75,6 @@ transition-duration: 0.3s; }
     }
 }
 
-.flex_title { 
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-    margin-right: 10%;
-    h1 { font-family: 'Shrikhand', cursive;;
-    font-size: 1.7rem;}
-}
-
-
 @keyframes slide {
     0% { transform: translateX(-20rem);
     }
@@ -287,8 +82,7 @@ transition-duration: 0.3s; }
     }
 }
 
-
-/*Boîte de recettes*/
+/*Animation d'apparition des plats */
 
 .flexpage ul {
     :nth-child(1) {     
@@ -318,81 +112,8 @@ transition-duration: 0.3s; }
         bottom:0rem;
         opacity:1;}
 }
-.container--recepe {
-    display: flex;
-    overflow: hidden;
-    height: 4.5rem;
-    @include box_shadowing;
-    .recepe__box {
-        @include flex_center;
-        width: 100%;
-        overflow: hidden;
-        &--txt {
-            width: 100%;   
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            overflow: hidden;
-            margin-left: 1rem;    
-        }    
-        &--price {
-            @include flex_center;    
-            max-width: 100%;
-            background-color: azure;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }  
-    }
-    .recepe__check {
-        width: 5rem;
-        @include flex_center;
-        background-color: $color-third;
-        color: white;
-        justify-content: center;
-        margin-right: -5rem;
-        transition-duration: 1.0s;
-        transition-timing-function: ease-in;
-        cursor: pointer;
-        i {
-            transform: rotate(0deg);
-            transition-duration: 1.0s;
-            transition-timing-function: ease-in;
-          }
-    }
-}
-.recepe__box--txt * { 
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;       
-}
-.container--recepe:hover .recepe__check {
-    margin-right: 0;
-    transition-duration: 1.0s;
-    transition-timing-function: ease-in;    
-    i {
-        transform: rotate(360deg);
-        transition-duration: 1.0s;
-        transition-timing-function: ease-in;
-    } 
-}
-.recepe:hover { 
-    @include box_shadowing_hover;
-    transition-duration: 0.3s;    
-}
 
-/**Footer**/
-
-footer {   
-    @include foot_general;
-    h2{ 
-        @include foot_marge;
-        @include foot_title;       
-    }
-    p { @include foot_marge;
-    }
-}
-/*Loader*/
+/***LOADER***/
 
 .loader {
     display: flex;

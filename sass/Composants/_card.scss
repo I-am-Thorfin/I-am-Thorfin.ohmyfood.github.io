@@ -1,0 +1,37 @@
+.container--card { 
+    padding-bottom: 1rem;
+    position: relative;
+    transition-duration: 0.3s;
+    .card__img {
+        height: 8rem;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        width: 100%;  
+    }
+    .card__end { 
+        margin: auto;
+        margin-top: 1rem;
+        height: auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+    } 
+    .card__new {
+        background-color: $color-third;
+        width: auto;
+        padding: 0.3rem 1rem ;
+        position: absolute;
+        border-radius: 0.2rem;
+        top:1rem;
+        right:1rem;
+        text-align: center;
+        color: darken($color-third,35%);
+    }
+}
+
+.container--card:hover {
+    @include bright;
+    @include box_shadowing_hover;
+    transition-duration: 0.3s;
+}
