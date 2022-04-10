@@ -4,11 +4,12 @@ header {
     background-color: $color_light_grey;   
     h1 {
         text-align: center;
+        font-size: 1.5rem;
     }
     p { text-align: center}
     .btn {
         margin-bottom: 4rem;
-    }
+        }
     .header__title { 
         @include flex_center;
         justify-content: center;

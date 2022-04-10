@@ -1,0 +1,27 @@
+.heart { 
+    font-size: 2rem;
+    height: 2rem;
+    
+    .far { display: block;
+        transition-duration: 0.3s;         
+    }
+    .fas { 
+        display :block;
+        background: linear-gradient(180deg, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        bottom:2rem;
+        opacity: 0;
+        transition-duration: 0.3s; 
+
+    }
+}   
+.heart:hover .far { 
+opacity: 0;
+transition-duration: 0.3s; 
+}
+.heart:hover .fas { opacity: 1;
+transition-duration: 0.3s; }
+

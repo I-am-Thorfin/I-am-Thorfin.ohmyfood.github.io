@@ -1,0 +1,101 @@
+.menu{
+    border-radius: 2.5rem 2.5rem 0 0;
+    position: relative;
+    margin-top: -2.5rem;
+    
+    
+    h2 { 
+        font-weight: normal;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        position: relative;
+        animation: slide 1s forwards;
+        animation-delay: 0.1s; 
+        @include desktop-responsive {
+            text-align: start;
+    
+            }
+    }
+    h2::after {
+        content: "";
+        display: block;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $color-third;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        animation: slide 1s forwards;
+        animation-delay: 0.5s; 
+    }
+    section {
+        justify-content: flex-start;  
+
+        @include desktop-responsive {
+            padding-left: 0%; 
+            padding-right: 0%;
+        }
+        
+        .btn {
+            @include tablette-responsive {
+                margin-left: 40%;
+                margin-right: auto;
+            }
+            
+        }   
+    }
+      
+}
+
+@keyframes slide {
+    0% { transform: translateX(-20rem);
+    }
+    100% {transform: translateX(0rem);
+    }
+}
+
+/*Titre principale, page des menus*/
+.flex_title { 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 5%;
+   
+    @include tablette-responsive {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    h1 { font-family: 'Shrikhand', cursive;;
+    font-size: 1.6rem;}
+}
+/*Apparition des menus*/
+.menu ul {
+    :nth-child(1) {     
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: 0.25s;
+        animation-fill-mode: both;}
+    :nth-child(2) {    
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;}
+    :nth-child(3) {     
+        position: relative;
+        animation: fondu-in 0.75s ease;
+        animation-delay: .75s;
+        animation-fill-mode: both;}
+}
+@keyframes fondu-in {
+    0% { 
+        transform: translateY(5rem);
+        opacity:0;
+    }
+    50% { transform: translateY(0rem);
+    opacity: 0.5;}
+    100% {
+        transform: translateY(0rem);
+        opacity:1;}
+}

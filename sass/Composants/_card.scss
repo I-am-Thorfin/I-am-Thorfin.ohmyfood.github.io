@@ -2,6 +2,16 @@
     padding-bottom: 1rem;
     position: relative;
     transition-duration: 0.3s;
+    @include tablette-responsive {   
+        width: 45%;
+        margin:1rem
+        }
+        @include desktop-responsive {   
+            width: 45%;
+            max-width: 30rem;
+            margin:1rem
+
+            }
     .card__img {
         height: 8rem;
         border-radius: 1rem 1rem 0 0;

@@ -1,6 +1,7 @@
 .bg_tuto { 
     background-color: white;
-    }    
+        
+}    
 .container--tuto {
     width: auto;
     border-radius: 1.5rem;
@@ -9,6 +10,11 @@
     display: flex;
     align-items: center;       
     transition-duration: 0.3s;   
+    @include tablette-responsive {
+        width:30rem;
+        margin:auto;
+        margin-top:1rem;
+        }
     .tuto__circle {
         @include flex_center;
         justify-content: center;
@@ -20,12 +26,16 @@
         color: white;
         position: relative;
         z-index: 1;
-        right:0.75rem
+        right:0.75rem;
     }
     .tuto__txt {
         width: 100%;
         margin:2rem;
         font-weight: bold;
+        @include tablette-responsive {
+            
+            width: 20rem;
+            }
     }
     .tuto__icon {
         @include flex_center;
@@ -33,6 +43,10 @@
         width: 10%;
         margin: auto; 
         color: darken($color_light_grey,50%);
+        @include tablette-responsive {
+            
+            width: 5rem;
+            }
     }    
 }
 .container--tuto:hover{ 

@@ -45,6 +45,9 @@ ol {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 0px;
+    @include desktop-responsive {   
+        
+    }
 }
 
 section { 
@@ -53,10 +56,32 @@ section {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 4rem;
+    @include tablette-responsive {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-right: 0rem;
+    padding-left: 0rem;
+    @include desktop-responsive {   
+        
+        justify-content: space-around;
+        padding-left: 15%;
+        padding-right: 15%;
+
+        }
+           
+        }
     
     h2 {
         margin-top: 3rem;
         margin-bottom: 1rem;
+        width: 100%;
+        @include tablette-responsive {
+            width: 80%;
+        }
+        @include desktop-responsive {
+            text-align: center;    
+        }
     }
 }
 
@@ -67,5 +92,6 @@ section {
     margin-top: 1rem;
     margin-bottom: 1rem;
     @include box_shadowing;
+    
 }
 

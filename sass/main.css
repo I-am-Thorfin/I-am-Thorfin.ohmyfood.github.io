@@ -84,9 +84,47 @@ section {
   padding-bottom: 4rem;
 }
 
+@media screen and (min-width: 768px) {
+  section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  section {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
 section h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  section h2 {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section h2 {
+    text-align: center;
+  }
 }
 
 .container {
@@ -99,6 +137,7 @@ section h2 {
           box-shadow: 0px 3px 3px #c3c3c3;
 }
 
+/****Sert à définir les boutons****/
 .btn {
   margin: auto;
   height: 3rem;
@@ -128,11 +167,27 @@ section h2 {
           transition-duration: 0.3s;
 }
 
+/****Sert à définir les cartes de la page principale****/
 .container--card {
   padding-bottom: 1rem;
   position: relative;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .container--card {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container--card {
+    width: 45%;
+    max-width: 30rem;
+    margin: 1rem;
+  }
 }
 
 .container--card .card__img {
@@ -180,6 +235,7 @@ section h2 {
           transition-duration: 0.3s;
 }
 
+/****Sert à définir les cellules de "Fonctionnement" sur la page principale****/
 .bg_tuto {
   background-color: white;
 }
@@ -197,6 +253,14 @@ section h2 {
           align-items: center;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .container--tuto {
+    width: 30rem;
+    margin: auto;
+    margin-top: 1rem;
+  }
 }
 
 .container--tuto .tuto__circle {
@@ -226,6 +290,12 @@ section h2 {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  .container--tuto .tuto__txt {
+    width: 20rem;
+  }
+}
+
 .container--tuto .tuto__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,6 +311,12 @@ section h2 {
   color: #777777;
 }
 
+@media screen and (min-width: 768px) {
+  .container--tuto .tuto__icon {
+    width: 5rem;
+  }
+}
+
 .container--tuto:hover {
   background-color: #f2eafb;
   -webkit-transition-duration: 0.3s;
@@ -253,6 +329,20 @@ section h2 {
           transition-duration: 0.3s;
 }
 
+/****Sert à définir les cartes des menus et leurs animations sur les pages des menus****/
+@media screen and (min-width: 768px) {
+  .menu-container {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  .menu-container {
+    width: 30%;
+  }
+}
+
 .container--recepe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,6 +351,12 @@ section h2 {
   height: 4.5rem;
   -webkit-box-shadow: 0px 3px 3px #c3c3c3;
           box-shadow: 0px 3px 3px #c3c3c3;
+}
+
+@media screen and (min-width: 768px) {
+  .container--recepe {
+    width: 100%;
+  }
 }
 
 .container--recepe .recepe__box {
@@ -356,13 +452,52 @@ section h2 {
           transition-timing-function: ease-in;
 }
 
-.recepe:hover {
+.container--recepe:hover {
   -webkit-box-shadow: 2px 5px 5px #aaaaaa;
           box-shadow: 2px 5px 5px #aaaaaa;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
+/****Sert à définir les coeurs qui apparaissent sur les cartes de la page princpale et dans le titre des pages des menus****/
+.heart {
+  font-size: 2rem;
+  height: 2rem;
+}
+
+.heart .far {
+  display: block;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.heart .fas {
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
+  background: linear-gradient(180deg, #ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  bottom: 2rem;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.heart:hover .far {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.heart:hover .fas {
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/****Définit le header*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +514,7 @@ header {
 
 header h1 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 header p {
@@ -445,99 +581,7 @@ header .header__location input {
   padding: 0rem 0rem;
 }
 
-footer {
-  background-color: #373737;
-  color: #f6f6f6;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer h2 {
-  margin-left: 1rem;
-  font-family: 'Shrikhand', cursive;
-  font-size: 1.5rem;
-}
-
-footer a {
-  margin-left: 1rem;
-  color: #f6f6f6;
-}
-
-footer a:visited {
-  color: #f6f6f6;
-}
-
-footer .fas {
-  width: 1rem;
-}
-
-/**LE COEUR**/
-.heart {
-  font-size: 2rem;
-  height: 2rem;
-  overflow: hidden;
-}
-
-.heart .far {
-  display: block;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-.heart .fas {
-  display: block;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
-  background: linear-gradient(180deg, #ff79da, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  bottom: 2rem;
-  opacity: 0;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-.heart:hover .far {
-  opacity: 0;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-.heart:hover .fas {
-  opacity: 1;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-/*Titre principale, page des menus*/
-.flex_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2rem;
-  margin-right: 10%;
-}
-
-.flex_title h1 {
-  font-family: 'Shrikhand', cursive;
-  font-size: 1.7rem;
-}
-
-/*Titre secondaire, animés, page des menus*/
+/****Sert à définir le <main> spécifique aux pages des menus****/
 .menu {
   border-radius: 2.5rem 2.5rem 0 0;
   position: relative;
@@ -546,12 +590,19 @@ footer .fas {
 
 .menu h2 {
   font-weight: normal;
+  font-size: 1.2rem;
   text-transform: uppercase;
   position: relative;
   -webkit-animation: slide 1s forwards;
           animation: slide 1s forwards;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
+}
+
+@media screen and (min-width: 992px) {
+  .menu h2 {
+    text-align: start;
+  }
 }
 
 .menu h2::after {
@@ -567,6 +618,26 @@ footer .fas {
           animation: slide 1s forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+.menu section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (min-width: 992px) {
+  .menu section {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu section .btn {
+    margin-left: 40%;
+    margin-right: auto;
+  }
 }
 
 @-webkit-keyframes slide {
@@ -591,8 +662,36 @@ footer .fas {
   }
 }
 
-/*Animation d'apparition des plats */
-.flexpage ul :nth-child(1) {
+/*Titre principale, page des menus*/
+.flex_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .flex_title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flex_title h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.6rem;
+}
+
+/*Apparition des menus*/
+.menu ul :nth-child(1) {
   position: relative;
   -webkit-animation: fondu-in 0.75s ease;
           animation: fondu-in 0.75s ease;
@@ -602,7 +701,7 @@ footer .fas {
           animation-fill-mode: both;
 }
 
-.flexpage ul :nth-child(2) {
+.menu ul :nth-child(2) {
   position: relative;
   -webkit-animation: fondu-in 0.75s ease;
           animation: fondu-in 0.75s ease;
@@ -612,7 +711,7 @@ footer .fas {
           animation-fill-mode: both;
 }
 
-.flexpage ul :nth-child(3) {
+.menu ul :nth-child(3) {
   position: relative;
   -webkit-animation: fondu-in 0.75s ease;
           animation: fondu-in 0.75s ease;
@@ -624,35 +723,41 @@ footer .fas {
 
 @-webkit-keyframes fondu-in {
   0% {
-    bottom: -5rem;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
     opacity: 0;
   }
   50% {
-    bottom: 0rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
     opacity: 0.5;
   }
   100% {
-    bottom: 0rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
     opacity: 1;
   }
 }
 
 @keyframes fondu-in {
   0% {
-    bottom: -5rem;
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
     opacity: 0;
   }
   50% {
-    bottom: 0rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
     opacity: 0.5;
   }
   100% {
-    bottom: 0rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
     opacity: 1;
   }
 }
 
-/***LOADER***/
+/****Sert à définir les propriétés du loader****/
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -950,5 +1055,39 @@ footer .fas {
             transform: rotate(360deg);
     border-top-color: #9356DC;
   }
+}
+
+/****sert à définir les propriétés du footer****/
+footer {
+  background-color: #373737;
+  color: #f6f6f6;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer h2 {
+  margin-left: 1rem;
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.5rem;
+}
+
+footer a {
+  margin-left: 1rem;
+  color: #f6f6f6;
+}
+
+footer a:visited {
+  color: #f6f6f6;
+}
+
+footer .fas {
+  width: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
