@@ -64,9 +64,9 @@ section {
     padding-left: 0rem;
     @include desktop-responsive {   
         
-        justify-content: space-around;
-        padding-left: 15%;
-        padding-right: 15%;
+        
+        padding-left: 5%;
+        padding-right: 5%;
 
         }
            
@@ -85,13 +85,4 @@ section {
     }
 }
 
-.container { 
-    width: 100%;
-    border-radius: 1rem;
-    background-color: white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    @include box_shadowing;
-    
-}
 

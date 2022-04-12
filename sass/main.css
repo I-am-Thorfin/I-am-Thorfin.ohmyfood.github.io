@@ -102,10 +102,8 @@ section {
 
 @media screen and (min-width: 768px) and (min-width: 992px) {
   section {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -184,8 +182,8 @@ section h2 {
 
 @media screen and (min-width: 992px) {
   .container--card {
-    width: 45%;
-    max-width: 30rem;
+    min-width: 20rem;
+    width: 22%;
     margin: 1rem;
   }
 }
@@ -1023,7 +1021,7 @@ header .header__location input {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border-top: 3px solid black;
+  border-top: 3px solid #9356DC;
   -webkit-animation: loading 1.5s ease infinite;
           animation: loading 1.5s ease infinite;
 }

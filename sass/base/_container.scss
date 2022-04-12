@@ -1,0 +1,9 @@
+.container { 
+    width: 100%;
+    border-radius: 1rem;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @include box_shadowing;
+    
+}

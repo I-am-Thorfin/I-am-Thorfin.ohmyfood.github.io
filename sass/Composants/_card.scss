@@ -7,8 +7,8 @@
         margin:1rem
         }
         @include desktop-responsive {   
-            width: 45%;
-            max-width: 30rem;
+            min-width: 20rem;
+            width: 22%;
             margin:1rem
 
             }

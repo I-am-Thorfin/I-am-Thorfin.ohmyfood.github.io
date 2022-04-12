@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/base";
+@import "./base/container";
 /****Sert à définir les boutons****/
 @import "./composants/buttons";
 /****Sert à définir les cartes de la page principale****/
@@ -15,7 +16,6 @@
 @import "./layouts/header";
 /****Sert à définir le <main> spécifique aux pages des menus****/
 @import "./layouts/main-menu";
-@import "./layouts/container";
 /****Sert à définir les propriétés du loader****/
 @import "./layouts/_loader";
 /****sert à définir les propriétés du footer****/
