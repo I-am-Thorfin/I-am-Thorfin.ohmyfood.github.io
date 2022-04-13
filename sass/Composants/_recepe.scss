@@ -49,16 +49,17 @@
         color: white;
         justify-content: center;
         margin-right: -5rem;
-        transition-duration: 1.0s;
+        transition-duration: 0.5s;
         transition-timing-function: ease-in;
         cursor: pointer;
-        i {
-            transform: rotate(0deg);
-            transition-duration: 1.0s;
+        i {              
+            transition-duration: 0.5s;
             transition-timing-function: ease-in;
-          }
+        }
     }
 }
+
+
 .recepe__box--txt * { 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -66,15 +67,30 @@
 }
 .container--recepe:hover .recepe__check {
     margin-right: 0;
-    transition-duration: 1.0s;
-    transition-timing-function: ease-in;    
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;  
     i {
         transform: rotate(360deg);
-        transition-duration: 1.0s;
+        transition-duration: 0.5s;
         transition-timing-function: ease-in;
+        
     } 
 }
+
+@keyframes check_rotate {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% { transform: rotate(360deg);
+    }  
+}
+
+
+
+
 .container--recepe:hover { 
     @include box_shadowing_hover;
     transition-duration: 0.3s;    
 }
+
+

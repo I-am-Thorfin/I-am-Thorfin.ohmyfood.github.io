@@ -414,18 +414,16 @@ section h2 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: -5rem;
-  -webkit-transition-duration: 1.0s;
-          transition-duration: 1.0s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   cursor: pointer;
 }
 
 .container--recepe .recepe__check i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition-duration: 1.0s;
-          transition-duration: 1.0s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
@@ -438,8 +436,8 @@ section h2 {
 
 .container--recepe:hover .recepe__check {
   margin-right: 0;
-  -webkit-transition-duration: 1.0s;
-          transition-duration: 1.0s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
 }
@@ -447,10 +445,32 @@ section h2 {
 .container--recepe:hover .recepe__check i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition-duration: 1.0s;
-          transition-duration: 1.0s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
+}
+
+@-webkit-keyframes check_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check_rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .container--recepe:hover {
@@ -692,17 +712,15 @@ header .header__location input {
 }
 
 /*Apparition des menus*/
-.menu ul :nth-child(1) {
+.menu ul li:nth-child(1) {
   position: relative;
-  -webkit-animation: fondu-in 0.75s ease;
-          animation: fondu-in 0.75s ease;
+  -webkit-animation: fondu-in 0.75s ease both;
+          animation: fondu-in 0.75s ease both;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 
-.menu ul :nth-child(2) {
+.menu ul li:nth-child(2) {
   position: relative;
   -webkit-animation: fondu-in 0.75s ease;
           animation: fondu-in 0.75s ease;
@@ -712,7 +730,7 @@ header .header__location input {
           animation-fill-mode: both;
 }
 
-.menu ul :nth-child(3) {
+.menu ul li:nth-child(3) {
   position: relative;
   -webkit-animation: fondu-in 0.75s ease;
           animation: fondu-in 0.75s ease;

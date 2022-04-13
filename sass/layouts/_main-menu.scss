@@ -72,17 +72,17 @@
 }
 /*Apparition des menus*/
 .menu ul {
-    :nth-child(1) {     
+    li:nth-child(1) {     
         position: relative;
-        animation: fondu-in 0.75s ease;
-        animation-delay: 0.25s;
-        animation-fill-mode: both;}
-    :nth-child(2) {    
+        animation:fondu-in 0.75s ease both; 
+        animation-delay: 0.25s; 
+    }       
+    li:nth-child(2) {    
         position: relative;
         animation: fondu-in 0.75s ease;
         animation-delay: 0.5s;
         animation-fill-mode: both;}
-    :nth-child(3) {     
+    li:nth-child(3) {     
         position: relative;
         animation: fondu-in 0.75s ease;
         animation-delay: .75s;
