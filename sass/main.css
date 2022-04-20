@@ -392,7 +392,6 @@ section h2 {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 100%;
-  max-width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -449,28 +448,6 @@ section h2 {
           transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
-}
-
-@-webkit-keyframes check_rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes check_rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 .container--recepe:hover {
