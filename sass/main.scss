@@ -1,6 +1,10 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+/****Sert à définir les propriétés du loader****/
+@import "./layouts/_loader";
+/***Sert à définir les fondations***/
 @import "./base/base";
+/***Sert à définir le container principal des composants***/
 @import "./base/container";
 /****Sert à définir les boutons****/
 @import "./composants/buttons";
@@ -16,7 +20,5 @@
 @import "./layouts/header";
 /****Sert à définir le <main> spécifique aux pages des menus****/
 @import "./layouts/main-menu";
-/****Sert à définir les propriétés du loader****/
-@import "./layouts/_loader";
 /****sert à définir les propriétés du footer****/
 @import "./layouts/footer";
